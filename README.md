@@ -1,12 +1,20 @@
-I was frustrated with the fact that the public HP API has had no changes in years, so ive made this really basic web scraper to autofill serialnumbers via registry to the HP Website, then grab the warranty end date and save that to the registry. You can then utilise powershell scripts to upload to your RMM, or whatever you need.
+HP Warranty Scraper
+A simple Python-based web scraper that captures the serial number of an HP machine, queries the HP Warranty Check site, and writes the warranty end date to the Windows Registry.
+Perfect for feeding warranty info into RMM tools or UDFs via PowerShell scripts.
 
-TO COMPILE:
+HP's public warranty API hasn’t been maintained in years, and there’s no reliable way to automate warranty lookups anymore. This tool fills that gap by scraping directly from the HP site using the device's serial number.
 
-You'll need python installed on your machine. Once installed, use:
+Features
+- Automatically reads HP device serial from WMI.
+- Scrapes warranty end date from HP's support site.
+- Writes the result to the Windows Registry.
+- Easy integration with your RMM via follow-up PowerShell scripts.
+- Lightweight.
 
-pyinstaller --onefile --window PATH\TO\YOUR\.PY
+Compile
+Make sure Python is installed, then run:
 
-to create the .exe
+pyinstaller --onefile --windowed .\your_script.py
 
-
-Also, im not a programmer / dev, this was made from heaps of research online, so if theres errors or functionalities that are redundant or useless, please let me know.
+Disclaimer
+I'm not a professional developer — just an MSP frustrated by the lack of support from HP’s APIs. This tool is stitched together with online research and late nights. If you find bugs, inefficiencies, or have ideas, feel free to open an issue or PR. Feedback is welcome!
