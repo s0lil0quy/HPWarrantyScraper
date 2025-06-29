@@ -1,4 +1,5 @@
 HP Warranty Scraper
+
 A simple Python-based web scraper that captures the serial number of an HP machine, queries the HP Warranty Check site, and writes the warranty end date to the Windows Registry.
 Perfect for feeding warranty info into RMM tools or UDFs via PowerShell scripts.
 
